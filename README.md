@@ -35,7 +35,14 @@ kubectl apply -f k8s/
 
 ## Running the experiment
 
-1. In the cluster that has PlantD deployed, use the YAMLs under the `plantd_yamls` to setup an experiment.
+In the cluster that has PlantD deployed, use the YAMLs under the `plantd_yamls` to setup an experiment. 
+
+`plantd_yamls` directory contains k8s CRs needed for the experiment. Pipeline resource has a dependency on  DataSet, and Experiment has a dependency on LoadPattern and Pipeline. Hence, you will need to apply the CRs in the following order - 
+1. schema (`kubectl apply -f schema.yaml`)
+2. load pattern (`kubectl apply -f loadpattern.yaml`)
+3. dataset (`kubectl apply -f dataset.yaml`)
+4. pipeline (`kubectl apply -f pipeline.yaml`)
+5. experiment (`kubectl apply -f experiment.yaml`)
 
 ## Phases
 
