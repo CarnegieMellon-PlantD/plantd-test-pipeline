@@ -1,12 +1,6 @@
 apiVersion: windtunnel.plantd.org/v1alpha1
 kind: Schema
 metadata:
-  labels:
-    app.kubernetes.io/name: schema
-    app.kubernetes.io/instance: schema
-    app.kubernetes.io/part-of: plantd-operator
-    app.kubernetes.io/managed-by: kustomize
-    app.kubernetes.io/created-by: plantd-operator
   name:  product
   namespace: test-pipeline
 spec:

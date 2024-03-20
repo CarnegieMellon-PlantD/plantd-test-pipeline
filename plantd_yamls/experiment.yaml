@@ -1,20 +1,18 @@
 apiVersion: windtunnel.plantd.org/v1alpha1
 kind: Experiment
 metadata:
-  labels:
-    app.kubernetes.io/name: experiment
-    app.kubernetes.io/instance: experiment-test-pipeline
-    app.kubernetes.io/part-of: plantd
-    app.kubernetes.io/managed-by: kustomize
-    app.kubernetes.io/created-by: plantd
   name: experiment-test-pipeline
   namespace: test-pipeline
 spec:
   pipelineRef:
     name: pipeline-test-pipeline
     namespace: test-pipeline
-  loadPatterns:
+  endpointSpecs:
     - endpointName: upload
+      dataSpec:
+        dataSetRef:
+          name: dataset-test-pipeline
+          namespace: test-pipeline
       loadPatternRef:
         name: loadpattern-test-pipeline
         namespace: test-pipeline

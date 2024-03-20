@@ -1,12 +1,6 @@
 apiVersion: windtunnel.plantd.org/v1alpha1
 kind: Pipeline
 metadata:
-  labels:
-    app.kubernetes.io/name: pipeline
-    app.kubernetes.io/instance: pipeline-test-pipeline
-    app.kubernetes.io/part-of: plantd-operator
-    app.kubernetes.io/managed-by: kustomize
-    app.kubernetes.io/created-by: plantd-operator
   name: pipeline-test-pipeline
   namespace: test-pipeline
 spec:
@@ -15,10 +9,6 @@ spec:
       http:
         url: http://phase1-service.test-pipeline.svc.cluster.local:3000/upload
         method: POST
-        body: 
-          dataSetRef: 
-            name: dataset-test-pipeline
-            namespace: test-pipeline
   inCluster: true
   cloudVendor: aws
   enableCostCalculation: true
