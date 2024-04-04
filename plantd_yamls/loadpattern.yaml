@@ -6,11 +6,11 @@ metadata:
 spec:
   stages:
     - target: 10
-      duration: 1m
+      duration: 4m
     - target: 50
-      duration: 1m
+      duration: 3m
     - target: 40
-      duration: 1m
+      duration: 3m
   preAllocatedVUs: 30
   startRate: 30
   maxVUs: 100
