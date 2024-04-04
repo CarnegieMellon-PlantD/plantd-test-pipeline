@@ -1,9 +1,10 @@
 apiVersion: windtunnel.plantd.org/v1alpha1
 kind: DataSet
 metadata:
-  name: dataset-test-pipeline
+  name: sample-dataset
   namespace: test-pipeline
 spec:
+  storageSize: 5Gi
   # the file format of the each file containing the generated data 
   # this may or may not be the output file format based on whether you want to compress these files
   fileFormat: "csv"
@@ -17,7 +18,6 @@ spec:
   # the total number of output files irrespective of compression
   # unless "compressPerSchema" is false, this field is applicable per schema
   numFiles: 100
-  parallelJobs: 1
   schemas:
     - name: product
       # the number of records to be generated in each output file

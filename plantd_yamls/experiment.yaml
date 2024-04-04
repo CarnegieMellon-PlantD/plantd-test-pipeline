@@ -1,18 +1,18 @@
 apiVersion: windtunnel.plantd.org/v1alpha1
 kind: Experiment
 metadata:
-  name: experiment-test-pipeline
+  name: sample-experiment
   namespace: test-pipeline
 spec:
   pipelineRef:
-    name: pipeline-test-pipeline
+    name: sample-pipeline
     namespace: test-pipeline
   endpointSpecs:
     - endpointName: upload
       dataSpec:
         dataSetRef:
-          name: dataset-test-pipeline
+          name: sample-dataset
           namespace: test-pipeline
       loadPatternRef:
-        name: loadpattern-test-pipeline
+        name: sample-loadpattern
         namespace: test-pipeline

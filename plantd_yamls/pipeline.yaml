@@ -1,23 +1,21 @@
 apiVersion: windtunnel.plantd.org/v1alpha1
 kind: Pipeline
 metadata:
-  name: pipeline-test-pipeline
+  name: sample-pipeline
   namespace: test-pipeline
 spec:
+  inCluster: true
   pipelineEndpoints:
     - name: upload
       http:
-        url: http://phase1-service.test-pipeline.svc.cluster.local:3000/upload
+        url: http://phase1-service.test-pipeline.svc:3000/upload
         method: POST
-  inCluster: true
-  cloudVendor: aws
-  enableCostCalculation: true
   metricsEndpoint:
     serviceRef:
       name: opentelemetrycollector
       namespace: test-pipeline
     port: prometheus-port-1
-  extraMetrics:
-    system:
-      tags: # Used for fetching the cost logs
-        pipeline-infrastructure: testpipeline
+  cloudProvider: aws
+  tags: # Used for fetching the cost logs
+    pipeline-infrastructure: testpipeline
+  enableCostCalculation: true

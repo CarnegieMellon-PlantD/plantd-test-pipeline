@@ -1,16 +1,16 @@
 apiVersion: windtunnel.plantd.org/v1alpha1
 kind: LoadPattern
 metadata:
-  name: loadpattern-test-pipeline
+  name: sample-loadpattern
   namespace: test-pipeline
 spec:
   stages:
     - target: 10
-      duration: 4m
+      duration: 1m
     - target: 50
-      duration: 3m
+      duration: 1m
     - target: 40
-      duration: 3m
+      duration: 1m
   preAllocatedVUs: 30
   startRate: 30
   maxVUs: 100
