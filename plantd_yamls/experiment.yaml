@@ -6,13 +6,12 @@ metadata:
 spec:
   pipelineRef:
     name: sample-pipeline
-    namespace: test-pipeline
   endpointSpecs:
     - endpointName: upload
       dataSpec:
         dataSetRef:
           name: sample-dataset
-          namespace: test-pipeline
       loadPatternRef:
         name: sample-loadpattern
         namespace: test-pipeline
+  useEndDetection: true

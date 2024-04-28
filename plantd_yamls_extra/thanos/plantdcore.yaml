@@ -1,0 +1,12 @@
+---
+apiVersion: windtunnel.plantd.org/v1alpha1
+kind: PlantDCore
+metadata:
+  namespace: plantd-operator-system
+  name: default
+spec:
+  thanos:
+    # `kubectl create secret generic thanos-objstore --from-file=s3.yaml=s3.yaml -n plantd-operator-system`
+    objectStoreConfig:
+      name: thanos-objstore
+      key: s3.yaml

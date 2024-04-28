@@ -1,0 +1,6 @@
+type: S3
+config:
+  bucket: "<bucket-name>"
+  endpoint: "s3.us-east-1.amazonaws.com"
+  access_key: "<aws-access-key>"
+  secret_key: "<aws-secret-key>"

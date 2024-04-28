@@ -1,0 +1,13 @@
+apiVersion: windtunnel.plantd.org/v1alpha1
+kind: DigitalTwin
+metadata:
+  name: sa-dt
+  namespace: test-pipeline
+spec:
+  modelType: "simple"
+  digitalTwinType: "schemaaware"
+  dataSet:
+    name: sample-dataset
+  pipeline:
+    name: sample-pipeline
+  pipelineCapacity: 20

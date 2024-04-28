@@ -1,0 +1,11 @@
+apiVersion: windtunnel.plantd.org/v1alpha1
+kind: DigitalTwin
+metadata:
+  name: reg-dt
+  namespace: test-pipeline
+spec:
+  modelType: "simple"
+  digitalTwinType: "regular"
+  experiments:
+    - namespace: test-pipeline
+      name: sample-experiment

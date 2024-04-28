@@ -13,7 +13,6 @@ spec:
   metricsEndpoint:
     serviceRef:
       name: opentelemetrycollector
-      namespace: test-pipeline
     port: prometheus-port-1
   cloudProvider: aws
   tags: # Used for fetching the cost logs

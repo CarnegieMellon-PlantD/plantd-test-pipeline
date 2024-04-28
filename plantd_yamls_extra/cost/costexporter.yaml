@@ -1,0 +1,10 @@
+apiVersion: windtunnel.plantd.org/v1alpha1
+kind: CostExporter
+metadata:
+  name: sample-costexporter
+spec:
+  cloudServiceProvider: aws
+  config:
+    # `kubectl create secret generic cost-exporter --from-file=aws.json=aws.json`
+    name: cost-exporter
+    key: aws.json

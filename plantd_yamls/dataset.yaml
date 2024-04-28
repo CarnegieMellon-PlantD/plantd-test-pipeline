@@ -4,7 +4,6 @@ metadata:
   name: sample-dataset
   namespace: test-pipeline
 spec:
-  storageSize: 5Gi
   # the file format of the each file containing the generated data 
   # this may or may not be the output file format based on whether you want to compress these files
   fileFormat: "csv"

@@ -1,0 +1,12 @@
+apiVersion: windtunnel.plantd.org/v1alpha1
+kind: Simulation
+metadata:
+  name: sample-simulation
+  namespace: test-pipeline
+spec:
+  digitalTwinRef:
+    namespace: test-pipeline
+    name: reg-dt
+  trafficModelRef:
+    namespace: test-pipeline
+    name: reg-trafficmodel
