@@ -1,7 +1,7 @@
 apiVersion: windtunnel.plantd.org/v1alpha1
 kind: Simulation
 metadata:
-  name: sample-simulation
+  name: reg-simulation
   namespace: test-pipeline
 spec:
   digitalTwinRef:
